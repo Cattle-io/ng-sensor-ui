@@ -1,0 +1,28 @@
+<footer class="nav-footer"
+[ngClass]="{'collapsed': isFooterCollapsed, 'expanded': !isFooterCollapsed }"
+>
+
+  <i class="fa fa-sort nav-footer-settings-icon" (click)="setToogleCollapsed()"></i>
+
+  <div class="nav-footer__row">
+
+
+    <div class="nav-footer__col profile-pic">
+      <ng-content select="img"></ng-content>
+    </div>
+
+    <div class="nav-footer__col">
+      <div class="username">
+        <ng-content select="h1"></ng-content>
+      </div>
+      <div class="status">
+        <div class="status-bullet"></div>
+        <ng-content select="h2"></ng-content>
+      </div>
+    </div>
+
+  </div>
+
+
+</footer>
+

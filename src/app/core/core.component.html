@@ -1,0 +1,42 @@
+<div class="core full-view">
+  <ui-navigation>
+
+    <ui-navigation-header></ui-navigation-header>
+
+    <ui-navigation-items>
+
+        <div class="" *ngFor="let link of $sidebarLinks">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="sidebar mat-expansion-panel">
+
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon> {{ link.icon }}</mat-icon> <h1> {{ link.text }} </h1>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <a mat-list-item [routerLink]="link.link + '/'"  style="color: white;">{{ link.text }} </a>
+              <a mat-list-item [routerLink]="link.link + '/add'"  style="color: white;">{{ link.text }} add</a>
+              <a mat-list-item [routerLink]="link.link + '/edit'"  style="color: white;">{{ link.text }} edit</a>
+              <a mat-list-item [routerLink]="link.link + '/show'"  style="color: white;">{{ link.text }} show </a>
+              <a mat-list-item [routerLink]="link.link + '/delete'"  style="color: white;">{{ link.text }} delete </a>
+
+            </mat-expansion-panel>
+
+
+
+
+        </div>
+    </ui-navigation-items>
+
+    <ui-navigation-content>
+      <router-outlet></router-outlet>
+    </ui-navigation-content>
+
+    <ui-navigation-footer>
+      <img class="profile circle thumb"[src]="$user.profile.src" >
+      <h1 class="profile username"> {{ $user.username}}</h1>
+      <h2 class="profile status"> {{ $user.status}}</h2>
+    </ui-navigation-footer>
+
+  </ui-navigation>
+</div>

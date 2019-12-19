@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('cattle-ui app is running!');
+    expect(page.getTitleText()).toEqual('ng-sensor-ui app is running!');
   });
 
   afterEach(async () => {

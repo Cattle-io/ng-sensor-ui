@@ -1,8 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { PagesModule } from './pages/pages.module';
+import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +20,15 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgxsModule.forRoot([]),
+    NgxsRouterPluginModule.forRoot(),
+    SharedModule,
+    CoreModule,
+    PagesModule,
+    AuthModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

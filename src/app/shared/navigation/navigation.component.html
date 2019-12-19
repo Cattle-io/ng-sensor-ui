@@ -1,0 +1,87 @@
+<mat-sidenav-container class="sidenav-container" style="overflow-y: hidden;">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport style="overflow-y: hidden;"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+
+    <mat-toolbar style="
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: rgb(238, 238, 238);
+      background-color: rgb(35, 47, 62);
+      font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      min-height: 56px;
+      padding-left: 24px;
+      padding-right: 24px;
+    ">
+      <ng-content select="ui-navigation-header"></ng-content>
+    </mat-toolbar>
+
+    <div class="sidebar-items-list webkit-scroll" style="">
+      <ng-content select="ui-navigation-items"></ng-content>
+    </div>
+
+    <ng-content select="ui-navigation-footer"></ng-content>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="navbar-header">
+
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <div class="navbar-header-content">
+        <div class="icons">
+        <div class="icon">
+
+            <mat-menu #navHeaderIconsMessagesMenu="matMenu">
+              <button mat-menu-item *ngFor="let notification of notifications$">
+                {{ notification | json}}
+              </button>
+            </mat-menu>
+
+            <button mat-icon-button [matMenuTriggerFor]="navHeaderIconsMessagesMenu" [disabled] = "notifications$.length === 0">
+              <mat-icon [matBadge]="notifications$.length" matBadgeColor="warn" [matBadgeHidden]="notifications$.length === 0" matBadgePosition="above after">messenger_outline</mat-icon>
+            </button>
+
+        </div>
+        <div class="icon">
+
+          <mat-menu #navHeaderIconsAlarmsMenu="matMenu">
+            <button mat-menu-item *ngFor="let message of messages$" >
+              {{ message | json}}
+            </button>
+          </mat-menu>
+
+          <button mat-icon-button [matMenuTriggerFor]="navHeaderIconsAlarmsMenu" [disabled] = "messages$.length === 0">
+            <mat-icon [matBadge]="messages$.length" matBadgeColor="warn" matBadgePosition="above after" [matBadgeHidden]="messages$.length === 0">notifications_none</mat-icon>
+          </button>
+
+        </div>
+        <div class="icon">
+          <mat-menu #navHeaderIconsSignoutMenu="matMenu">
+            <button mat-menu-item>Logout</button>
+          </mat-menu>
+
+          <button mat-icon-button [matMenuTriggerFor]="navHeaderIconsSignoutMenu">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </div>
+        </div>
+      </div>
+
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content select="ui-navigation-content"></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

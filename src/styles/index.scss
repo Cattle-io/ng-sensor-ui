@@ -1,0 +1,15 @@
+
+
+@import './material/index';
+@import './config/scrollbar';
+
+html, body { height: 100%; width: 100vw; height: 100vh; overflow: hidden;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*:focus {
+  outline:  none !important;
+}
+
+.mat-expansion-indicator::after {
+  color: rgb(238, 238, 238) !important;
+}

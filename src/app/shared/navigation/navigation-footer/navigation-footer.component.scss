@@ -1,0 +1,178 @@
+/*
+<footer class="nav-footer">
+  <div class="nav-footer__row">
+    <div class="nav-footer__col profile-pic">
+      <ng-content select="div.footer-profile-pic"></ng-content>
+    </div>
+    <div class="nav-footer__col">
+      <div class="nav-footer__row username">
+        <img src="" alt="status icon">
+        <ng-content select="div.footer-profile-username"></ng-content>
+      </div>
+      <div class="nav-footer__row status">
+        STATUS TEXT
+      </div>
+    </div>
+  </div>
+</footer>
+*/
+$footer-profile-height: 2em;
+i.nav-footer-settings-icon{
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 14px);
+  background-color:rgb(238, 238, 238, 0.97);
+  color: black;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 3px 6px;
+  &:hover{
+    cursor: pointer;
+    background-color:rgba(199, 197, 197, 0.97);
+  }
+}
+footer.nav-footer{
+  display: block;
+  width: 100%;
+  background-color: rgb(35, 47, 62) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  color: white;
+
+  position: absolute;
+  bottom: 0;
+
+  &.collapsed{
+    height: #{2*$footer-profile-height};
+
+  -webkit-transition: height 250ms ease-in-out;
+  -moz-transition: height 250ms ease-in-out;
+  -ms-transition: height 250ms ease-in-out;
+  -o-transition: height 250ms ease-in-out;
+  transition: height 250ms ease-in-out;
+  }
+
+  &.expanded{
+    height: 50vh;
+
+-webkit-transition: height 250ms ease-in-out;
+-moz-transition: height 250ms ease-in-out;
+-ms-transition: height 250ms ease-in-out;
+-o-transition: height 250ms ease-in-out;
+transition: height 250ms ease-in-out;
+  }
+
+}
+div.nav-footer__row{
+  display: block;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+}
+div.nav-footer__col{
+  display: block;
+  width: 100%;
+  padding: 0em;
+  box-sizing: border-box;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+}
+div.nav-footer__col.profile-pic{
+
+  display: block;
+  width: fit-content;
+  height: $footer-profile-height;
+
+}
+
+
+
+
+.username{
+  display: inline-block;
+  font-size: 18px;
+}
+.status{
+    font-size: 18px;
+    margin-top: 0.25em;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    text-transform: capitalize;
+}
+
+
+div.status-bullet{
+  display: block;
+   width: 0.85em;
+  height: 0.6em;
+  margin-left: 0.5em;
+  background-color: rgb(76, 175, 80);
+  border-radius: 1em;;
+}
+
+
+
+
+::ng-deep {
+  & > * img {
+    display: block;
+    width: 1em;
+    border-radius: 100%;
+  }
+}
+

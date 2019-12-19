@@ -1,0 +1,48 @@
+
+$sidebar-w: 200px;
+$header-h : 64px;
+
+main{
+
+ display: block;
+
+  width: 100%;
+  height: calc(100vh - #{$header-h});
+
+  position: relative;
+
+  left: 0px;
+  top: 0px;
+
+  z-index: 0;
+  box-sizing: border-box;
+  padding: 1em 1em;
+
+  margin-left: 0px;
+  margin-top: $header-h;
+
+}
+@media screen and (max-width: 600px) {
+
+  $sidebar-w: 0px;
+  $header-h : 64px;
+
+  main{
+
+    display: block;
+
+    width: 100%;
+     height: calc(100vh - #{$header-h});
+
+     position: relative;
+
+     left: 0px;
+     top: 0px;
+
+     z-index: 1000;
+     box-sizing: border-box;
+
+     padding: 1em 1em;
+     margin-left: 0px;
+   }
+}
