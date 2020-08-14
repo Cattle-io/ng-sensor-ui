@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { slideInAnimation } from './core.animations';
 
 @Component({
   selector: 'ui-core',
   templateUrl: './core.component.html',
-  styleUrls: ['./core.component.scss']
+  styleUrls: ['./core.component.scss'],
+  animations: [
+    slideInAnimation
+  ]
 })
 export class CoreComponent implements OnInit {
 
@@ -70,6 +76,10 @@ export class CoreComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
 }

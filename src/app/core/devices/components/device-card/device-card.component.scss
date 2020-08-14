@@ -1,0 +1,225 @@
+@import '~swiper/dist/css/swiper.min.css';
+
+.card-device{
+    &.unactive{
+        //filter: grayscale(100%);
+    }
+
+    &:hover{
+        //filter:blur(3px);
+        cursor: pointer;
+    }
+}
+
+
+
+.card{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 16.5em;
+    background: #1b2430;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+
+    .card-detail-wrapper{
+        top: 16.5em;
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+    &:hover{
+        .card-detail-wrapper{
+            top: 0em;
+            -webkit-transition: all 500ms ease;
+            -moz-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+        }
+    }
+}
+
+.card-main-wrapper{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-detail-wrapper{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+
+    height: 16.5em;
+    background: hsl(214deg 28% 15% / 88%);
+
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    span{
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        color: #b52222;
+        font-size: 22px;
+        
+    }
+    
+}
+
+
+.card-section-cover{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0em;
+    height: auto;  
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+.card-section-header{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    height: auto;  
+}
+
+.card-section-info{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0em 2em;
+    h1{
+
+        font-size: 1.5em;
+        font-weight: 100;
+        letter-spacing: 1px;
+        position: relative;
+        top: 0px;
+
+        color: white;
+        font-size: 22px;
+        letter-spacing: 2px;
+        font-weight: 300;
+
+        padding-bottom: 0.5em;
+
+        margin: 0;
+        padding: 0;
+
+    }
+    h2{
+        font-size: 1.25em;
+        font-weight: 300;
+        letter-spacing: 1px;
+        position: relative;
+        top: 0px;
+
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 300;
+
+        margin: 0.5em 0em;
+        padding: 0;
+    }
+}
+
+
+
+.card-section-footer{
+    
+    display: block;
+    width: 100%;
+
+    padding: 1em 2em;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+
+    .section-temp-and-hum{
+        
+        display: block;
+        width: 100%;
+        max-width: calc(100% - 3em);
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+}

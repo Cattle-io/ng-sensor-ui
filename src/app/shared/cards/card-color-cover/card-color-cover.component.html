@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-wrapper">
+
+        <br>
+
+       
+
+        <div class="card-section-header">
+            <ng-content select="[section-header]"></ng-content>
+        </div>
+
+        <div class="card-section-info">
+            <h1> {{ title }}</h1>
+            <h2> {{ subtitle }}</h2>
+        </div>
+
+        <div class="card-section-footer">
+            <ng-content select="[section-footer]"></ng-content>
+        </div>
+
+        
+
+        <div class="card-section-float-icon">
+            <img [src]="image">
+        </div>
+        
+        <div class="card-section-float-icon">
+            <img [src]="image">
+        </div>
+        
+
+         <!-- 
+        <div class="card-section-cover">
+           <img [src]="image"> 
+        </div>
+        <div class="card-section-info">
+            <h1>{{ title }}</h1>
+            <h2>{{ subtitle }}</h2>
+        </div>
+        <div class="card-section-buttons">
+            <div class="card-section-button" *ngFor="let button of buttons">
+                <button>
+                    {{ button.icon }}
+                </button>
+            </div>
+        </div>
+        
+        -->
+
+        
+    </div>
+</div>

@@ -13,11 +13,11 @@ export const DEVICES_ROUTES = [
     path: 'core/devices',
     component:  CoreComponent,
     children: [
-      { path: '', component: DeviceListComponent },
-      { path: ':deviceID', component: DeviceShowComponent },
-      { path: 'add', component: DeviceAddComponent },
-      { path: 'edit/:deviceId', component: DeviceEditComponent },
-      { path: 'delete/:deviceId', component: DeviceDeleteComponent }
+      { path: '', component: DeviceListComponent, data: {animation: 'DeviceListPage'} },
+      { path: ':deviceID', component: DeviceShowComponent, data: {animation: 'DeviceIdPage'} },
+      { path: 'add', component: DeviceAddComponent , data: {animation: 'DeviceAddPage'} },
+      { path: 'edit/:deviceId', component: DeviceEditComponent , data: {animation: 'DeviceEditPage'} },
+      { path: 'delete/:deviceId', component: DeviceDeleteComponent , data: {animation: 'DeviceDeletePage'} }
     ]
   },
 

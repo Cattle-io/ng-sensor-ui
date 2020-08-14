@@ -1,0 +1,195 @@
+.wrapper{
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height:calc(100vh - 50px);
+    box-sizing: border-box;
+    padding: 2em;
+
+    background-color: #00071700;
+    background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
+
+    background: rgb(41,83,111);
+    background: linear-gradient(135deg, rgba(41,83,111,1) 0%, rgba(29,56,74,1) 50%);
+
+}
+
+
+form{
+
+
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    border-radius: 0.5em;
+
+    box-sizing: border-box;
+    padding: 2em;
+
+    background-color: #f2f7f9;
+    color: black;
+
+    // background-image: url('https://1001freedownloads.s3.amazonaws.com/icon/thumb/334566/Industry-Circuit-icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .form-row{
+        &.x2 > div{
+            display: block;
+            width: 50%;
+        }
+        &.to-extrems{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+
+    .input-group{
+        display: block;
+        width: fit-content;
+
+        input[type=text]{
+            background: none;
+            border: none;
+            outline: none;
+            width: fit-content;
+        }
+    }
+
+    .input-group.id{
+
+        display: block;
+        width: 2.5em;
+        height: 2.5em;
+
+        background-color: gray;
+
+        border-radius: 100%;
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        input { 
+            width: 2em !important;
+            text-align: center;
+            font-weight: 900;
+            color:#f2f7f9;
+        }
+    }
+    .input-group.ip{
+        input { 
+            width: 5em !important;
+        }
+    }
+
+    .input-group.uid{
+        input { 
+            width: 5em !important;
+        }
+
+    }
+
+    .input-group.name,
+    .input-group.firmware,
+    .input-group.signal,
+    .input-group.animal{
+
+        
+        background-color:#80808026;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 0.5em;
+        
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        input { 
+            color: #585858;;
+            width: calc(100% - 3em - 15px) !important;
+        }
+
+        label{
+            color: #585858;;
+            padding: 0;
+            margin: 0;
+            padding-left: 5px;
+        }
+
+    }
+
+
+    .input-group.firmware{
+
+    }
+
+
+
+    .input-group.category,
+    .input-group.status,
+    .input-group.battery,
+    .input-group.experiment
+    {
+
+        width: calc(50% - 2em) !important;
+        background-color:#80808026;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 0.5em;
+        
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        margin-left: 1em;
+
+        select { 
+            background: none;
+            border: none;
+            outline: none;
+            color: #585858;;
+            width: calc(100% - 5em - 15px) !important;
+        }
+
+        label{
+            color: #585858;;
+            padding: 0;
+            margin: 0;
+            padding-left: 5px;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,11 @@
+<div class="widget number-and-icon-widget">
+    <div class="widget-wrapper">
+
+        <div class="icon">
+            <i *ngIf="iconType === 'fontawesome'" [class]="iconImage" [ngStyle]="{'color': color }"></i>  
+        </div>
+        
+        <span [ngStyle]="{'color': color }"> {{ value }} {{ units }} </span>
+    
+    </div>
+</div>

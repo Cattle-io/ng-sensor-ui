@@ -29,7 +29,9 @@
     </ui-navigation-items>
 
     <ui-navigation-content>
-      <router-outlet></router-outlet>
+      <div [@routeAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
     </ui-navigation-content>
 
     <ui-navigation-footer>

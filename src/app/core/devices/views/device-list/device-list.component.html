@@ -1,1 +1,31 @@
-<p>device-list works!</p>
+<div class="wrapper">
+
+
+    <div class="page-header">
+
+        <input type="search" class="input-search" placeholder="Search"
+        [(ngModel)]="SEARCH_KEYWORD"
+        > 
+        
+        <button class="button-add" (click)="goToDeviceAdd()">
+            <span class="material-icons">
+                library_add
+            </span>
+        </button>
+    </div>
+
+    <div class="page-content">
+        <ul class="cards-list">
+            <li class="cards-item" *ngFor="let device of (devices | searchByKeyword: SEARCH_KEYWORD)">
+                <ui-device-card 
+                [device] = "device" 
+                (edit)="goToDeviceById($event)"
+                (delete)="goToDeleteDeviceById($event)"
+                ></ui-device-card>
+            </li>
+        </ul>
+    </div>
+
+   
+    
+</div>

@@ -1,0 +1,122 @@
+$card-cover-h : 0em;
+$card-info-h : 3em;
+$card-buttons-h : 1em;
+$card-colorbar-h : 1em;
+$card-h : $card-cover-h + $card-info-h + $card-buttons-h + $card-colorbar-h;
+
+.card{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 16.5em;
+    background: #1b2430;
+    border: none;
+    border-radius: 15px;
+
+}
+
+.card-wrapper{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 100%;
+}
+
+
+.card-section-cover{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0em;
+    height: $card-cover-h;  
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+.card-section-info{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    h1{
+
+        font-size: 1.5em;
+        font-weight: 100;
+        letter-spacing: 1px;
+        position: relative;
+        top: 0px;
+
+        color: white;
+        font-size: 22px;
+        letter-spacing: 2px;
+        font-weight: 300;
+
+        padding-bottom: 0.5em;
+
+    }
+    h2{
+        font-size: 1.25em;
+        font-weight: 300;
+        letter-spacing: 1px;
+        position: relative;
+        top: 0px;
+
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+}
+.card-section-buttons{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0em;
+    height: $card-buttons-h ; 
+    
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    button{
+        display: block;
+        width: 33.33%;
+    }
+}
+
+.card-section-float-icon{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+
+    img{
+        width: 3em;
+        height: 3em;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+        border: 1px solid white;
+    }
+}

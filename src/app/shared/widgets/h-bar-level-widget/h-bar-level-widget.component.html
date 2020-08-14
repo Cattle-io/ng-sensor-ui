@@ -1,0 +1,8 @@
+<div class="widget h-bar-level-widget">
+    <div class="widget-wrapper">
+
+        <i *ngIf="iconType === 'fontawesome'" [class]="iconImage" [ngStyle]="{'color': (value > 20) ? 'green' : 'red' }"></i>  
+        <span [ngStyle]="{'background-color': (value > 20) ? 'green' : 'red', 'width' : value + '%' }"></span>
+    
+    </div>
+</div>

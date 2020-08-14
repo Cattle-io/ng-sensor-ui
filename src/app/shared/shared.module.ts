@@ -28,6 +28,12 @@ import { NavigationHeaderComponent } from './navigation/navigation-header/naviga
 import { NavigationItemsComponent } from './navigation/navigation-items/navigation-items.component';
 import { NavigationContentComponent } from './navigation/navigation-content/navigation-content.component';
 import { NavigationNavbarIconsComponent } from './navigation/navigation-navbar-icons/navigation-navbar-icons.component';
+import { CardColorCoverComponent } from './cards/card-color-cover/card-color-cover.component';
+import { NumberAndIconWidgetComponent } from './widgets/number-and-icon-widget/number-and-icon-widget.component';
+import { HBarLevelWidgetComponent } from './widgets/h-bar-level-widget/h-bar-level-widget.component';
+import { ImageBubbleWidgetComponent } from './widgets/image-bubble-widget/image-bubble-widget.component';
+import { InputTextBasicComponent } from './inputs/input-text-basic/input-text-basic.component';
+import { InputSelectBasicComponent } from './inputs/input-select-basic/input-select-basic.component';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -39,7 +45,10 @@ const COMPONENTS = [
   NavigationFooterComponent,
   NavigationHeaderComponent,
   NavigationItemsComponent,
-   NavigationContentComponent
+  NavigationContentComponent,
+  NavigationNavbarIconsComponent,
+  CardColorCoverComponent,
+  NumberAndIconWidgetComponent, HBarLevelWidgetComponent, ImageBubbleWidgetComponent
 ];
 
 const MODULES = [
@@ -58,6 +67,9 @@ const MODULES = [
   MatInputModule,
   MatSelectModule,
   MatBadgeModule,
+  BsDropdownModule, 
+  TooltipModule, 
+  ModalModule
 ]
 
 @NgModule({
@@ -70,8 +82,8 @@ const MODULES = [
     ... MODULES
   ],
 
-  declarations: [ ... COMPONENTS, NavigationNavbarIconsComponent ],
-  exports: [ ... COMPONENTS, ... MODULES, BsDropdownModule, TooltipModule, ModalModule],
+  declarations: [ ... COMPONENTS, InputTextBasicComponent, InputSelectBasicComponent,  ],
+  exports: [ ... COMPONENTS, ... MODULES, ],
 
 })
 export class SharedModule { }
