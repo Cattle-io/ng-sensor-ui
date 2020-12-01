@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output , EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'ui-input-text-basic',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputTextBasicComponent implements OnInit {
 
+  @Input()
+  label = '';
+
+  @Input()
+  placeholder = '';
+
+  @Output()
+  nChange = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onChange($event){
+    this.nChange.emit($event.target.value);
+  }
 }

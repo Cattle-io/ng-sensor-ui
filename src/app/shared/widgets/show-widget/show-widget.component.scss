@@ -1,0 +1,195 @@
+.widget.widget-show{
+
+    display: block;
+    width: 100%;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .label{
+        font-size: 18px;
+        color: white;
+    }
+
+    .led{
+
+        
+        display: block;
+       
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+
+        margin-left: 10px;
+    }
+
+   
+
+
+    .switch {
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+
+    .switch label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: #a5a39d;
+        font-size: 18px;
+        text-align: center;
+        line-height: 75px;
+        text-shadow: 0 2px 1px rgba(0,0,0,0.25);
+        border-radius: 50%;
+        background: #b25244; /* Fallback */
+        background: linear-gradient(#f7f2f6, #b2ac9e);
+        transition: all 0.3s ease-out;
+        z-index: -1;
+        box-shadow:
+            inset 0 2px 3px rgba(255,255,255,0.13),
+            0 5px 8px rgba(0,0,0,0.3),
+            0 10px 10px 4px rgba(0,0,0,0.3);
+
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            i{
+                font-size: 22px;
+                
+            -webkit-transition: all 340ms ease-in;
+            -moz-transition: all 340ms ease-in;
+            -ms-transition: all 340ms ease-in;
+            -o-transition: all 340ms ease-in;
+            transition: all 340ms ease-in;
+            }
+    }
+
+    .switch label:before {
+        content: ""; 
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        top: -10px;
+        bottom: -10px;
+        z-index: -1;
+        border-radius: inherit;
+        box-shadow: inset 0 10px 10px rgba(0,0,0,0.13); 
+        -webkit-filter:blur(1px); /* Smooth trick */
+        filter: blur(1px); /* Future-proof */
+    }
+    
+    .switch label:after {
+        content: ""; 
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        top: -10px;
+        bottom: -10px;
+        z-index: -2;
+        border-radius: inherit;
+        box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.1),
+            0 1px 2px rgba(0,0,0,0.3),
+            0 0 10px rgba(0,0,0,0.15);
+    }
+    .switch .fa-power-off:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        margin: -35% 0 0 -35%;
+        border-radius: 50%;
+        background: #d2cbc3; /* Fallback */
+        background: linear-gradient(#cbc7bc, #d2cbc3);
+        box-shadow:
+            0 -2px 5px rgba(255,255,255,0.05),
+            0 2px 5px rgba(255,255,255,0.1);
+        -webkit-filter:blur(1px); /* Smooth trick */
+        filter: blur(1px); /* Future-proof */
+    }
+
+
+  
+    .switch input ~ label { /* Button */
+        color: #b25244;
+        box-shadow:
+            inset 0 2px 3px rgba(255,255,255,0.13),
+            0 5px 8px rgba(0,0,0,0.35),
+            0 3px 10px 4px rgba(0,0,0,0.2);
+    } 
+    .switch input.isON ~ label { /* Button */
+        color: #52a913;
+        box-shadow:
+            inset 0 2px 3px rgba(255,255,255,0.13),
+            0 5px 8px rgba(0,0,0,0.35),
+            0 3px 10px 4px rgba(0,0,0,0.2);
+
+    } 
+
+    .switch:hover input.isON ~ label{
+ 
+        -webkit-box-shadow: inset 5px 6px 5px -50px rgba(0,0,0,0.65);
+        -moz-box-shadow: inset 5px 6px 5px -50px rgba(0,0,0,0.65);
+        box-shadow: inset 5px 6px 5px -50px rgba(0,0,0,0.65);
+
+        & i{
+       
+        }
+    }
+
+
+
+    .switch input {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        opacity: 0;
+        z-index: 100;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+}

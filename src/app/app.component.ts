@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, Route } from "@angular/router";
+import { Router, Route } from '@angular/router';
 
 @Component({
   selector: 'app-root',

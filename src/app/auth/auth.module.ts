@@ -10,12 +10,12 @@ import { RecoveryPasswordComponent } from './views/recovery-password/recovery-pa
 import { SharedModule } from '../shared/shared.module';
 import { AuthComponent } from './auth.component';
 
-const COMPONENTS = [SigninComponent, SignupComponent, RecoveryPasswordComponent]
+const COMPONENTS = [SigninComponent, SignupComponent, RecoveryPasswordComponent];
 
-console.warn('')
-console.warn(' AUTH_ROUTES  ')
-console.warn(AUTH_ROUTES )
-console.warn('')
+console.warn('');
+console.warn(' AUTH_ROUTES  ');
+console.warn(AUTH_ROUTES );
+console.warn('');
 
 
 @NgModule({

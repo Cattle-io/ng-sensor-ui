@@ -4,7 +4,7 @@
     height: 100%;
     min-height:calc(100vh - 50px);
     box-sizing: border-box;
-    padding: 2em;
+    padding: 1em;
 
     background-color: #00071700;
     background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
@@ -14,182 +14,119 @@
 
 }
 
-
-form{
-
-
+.wrapper.edit-device-wrapper .page-content{
     display: block;
     width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-    border-radius: 0.5em;
-
+    height: auto;
     box-sizing: border-box;
     padding: 2em;
+    background: #1b2430;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
 
-    background-color: #f2f7f9;
-    color: black;
-
-    // background-image: url('https://1001freedownloads.s3.amazonaws.com/icon/thumb/334566/Industry-Circuit-icon.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .form-row{
-        &.x2 > div{
-            display: block;
-            width: 50%;
-        }
-        &.to-extrems{
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            -webkit-flex-wrap: nowrap;
-            -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-            -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-align-content: center;
-            -ms-flex-line-pack: center;
-            align-content: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-        }
+.wrapper.edit-device-wrapper .page-content{
+    h1.title {
+        color: white;
+        font-size: 25px;
+        letter-spacing: 2x;
     }
-
-    .input-group{
-        display: block;
-        width: fit-content;
-
-        input[type=text]{
-            background: none;
-            border: none;
-            outline: none;
-            width: fit-content;
-        }
-    }
-
-    .input-group.id{
-
-        display: block;
-        width: 2.5em;
-        height: 2.5em;
-
-        background-color: gray;
-
-        border-radius: 100%;
-
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-        align-content: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-
-        input { 
-            width: 2em !important;
-            text-align: center;
-            font-weight: 900;
-            color:#f2f7f9;
-        }
-    }
-    .input-group.ip{
-        input { 
-            width: 5em !important;
-        }
-    }
-
-    .input-group.uid{
-        input { 
-            width: 5em !important;
-        }
-
-    }
-
-    .input-group.name,
-    .input-group.firmware,
-    .input-group.signal,
-    .input-group.animal{
-
-        
-        background-color:#80808026;
-        border-radius: 5px;
+    .field-20p-width{
+        display: inline-block;
+        width: calc(20% - 1em);
+        margin-right: 1em;
         box-sizing: border-box;
-        padding: 0.5em;
-        
-        font-weight: 600;
-        letter-spacing: 1px;
-
-        input { 
-            color: #585858;;
-            width: calc(100% - 3em - 15px) !important;
-        }
-
-        label{
-            color: #585858;;
-            padding: 0;
-            margin: 0;
-            padding-left: 5px;
-        }
-
     }
+}
 
+.wrapper.edit-device-wrapper .form--row{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
 
-    .input-group.firmware{
+.wrapper.edit-device-wrapper .form--row.row-2x > .col{
+    width: 50%;
+}
+.wrapper.edit-device-wrapper .form--row.row-3x > .col{
+    width: 33.3333%;
+}
+.wrapper.edit-device-wrapper .form--row.row-4x > .col{
+    width: 25%;
+}
+.wrapper.edit-device-wrapper .form--row .col{
+    margin-left: 0;
+    padding: 0;
+    
+}
 
+.wrapper.edit-device-wrapper .status-row .icons-wifi-battery{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    & i{
+        padding-left: 1em;
     }
-
-
-
-    .input-group.category,
-    .input-group.status,
-    .input-group.battery,
-    .input-group.experiment
-    {
-
-        width: calc(50% - 2em) !important;
-        background-color:#80808026;
-        border-radius: 5px;
-        box-sizing: border-box;
-        padding: 0.5em;
-        
-        font-weight: 600;
-        letter-spacing: 1px;
-
-        margin-left: 1em;
-
-        select { 
-            background: none;
-            border: none;
-            outline: none;
-            color: #585858;;
-            width: calc(100% - 5em - 15px) !important;
-        }
-
-        label{
-            color: #585858;;
-            padding: 0;
-            margin: 0;
-            padding-left: 5px;
-        }
-
+}
+.wrapper.edit-device-wrapper .status-row {
+    label{
+        padding-left: 1em;
+        margin: 0;
     }
+}
+.wrapper.edit-device-wrapper .online {
+    i,label{
+        color: green;
+    }
+}
+.wrapper.edit-device-wrapper .offline {
+    i,label{
+        color:red;
+    }
+}
 
+.wrapper.edit-device-wrapper button {
+
+    padding: 1em;
+    background-color: #00ff3a17;
+    border: 1px solid #b9b9b92b;
+    border-radius: 5px;
+    color: white;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #00ff3a30;
+    }
 
 }

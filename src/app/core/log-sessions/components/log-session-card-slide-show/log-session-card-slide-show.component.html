@@ -1,0 +1,36 @@
+<div class="card-slide-wrapper show">
+    <div class="card-section-header flex-extremes">
+            <h1> <strong>Started at : </strong> <br> 
+                {{ logSession.started_at | date:'short'}} 
+            </h1>
+            <h1> <strong>Finished at : </strong> <br>
+                {{ logSession.finished_at | date:'short'}} 
+            </h1>
+    </div>
+
+    <div class="card-section-info">
+        <h2> <img src="../../../../../assets/icons/project-icon-w3.png" class="icon-device">
+            Project: {{ project.title }}
+        </h2>
+        <h2> <img src="../../../../../assets/icons/device-icon-w3.png" class="icon-device">
+            Devices: {{ devicesUIDs }}
+        </h2>
+        <h2> <img src="../../../../../assets/icons/cow-icon-w3.png" class="icon-device">
+            Animals: {{ animalsNames }}
+        </h2>
+    </div>
+
+    
+
+
+<div class="card-section-footer">
+
+    <ui-show-widget
+        [label]="'STATUS'"
+        [value]="logSession.status === 'PLAY' "
+        (nClick)="goToShowLogSession(logSession.id)"
+    ></ui-show-widget>
+   
+</div>
+
+</div>

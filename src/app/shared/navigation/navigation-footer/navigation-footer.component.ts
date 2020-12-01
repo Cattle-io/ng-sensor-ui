@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationFooterComponent implements OnInit {
 
-  private isFooterCollapsed:boolean = true;
+  public isFooterCollapsed = true;
 
   constructor() { }
 

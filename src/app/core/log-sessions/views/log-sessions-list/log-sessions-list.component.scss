@@ -1,0 +1,115 @@
+.wrapper{
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height:calc(100vh - 50px);
+    box-sizing: border-box;
+    padding: 1em;
+
+    background-color: #00071700;
+    background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
+
+    background: rgb(41,83,111);
+    background: linear-gradient(135deg, rgba(41,83,111,1) 0%, rgba(29,56,74,1) 50%);
+
+}
+
+
+.page-header{
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+
+    .input-search{
+        
+        padding: 1em;
+
+        background: none;
+        border: none;
+        outline: none;
+
+        color: black;
+
+        width: 20em;
+        padding: 0.5em;
+        background-color: rgb(255 255 255);
+        border-bottom: 1px solid rgb(19 27 41 / 38%);
+        margin-right: 1em;
+
+    }
+    .button-add{
+        padding: 1em;
+
+        background: none;
+        border: none;
+        outline: none;
+
+        background-color: white;
+        color:#000717db;
+
+        padding: 0.5em;
+        margin-right: 0em;
+
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 3px;
+    }
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.page-content{
+
+}
+
+.cards-list{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.cards-item{
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    padding: 1em;
+}

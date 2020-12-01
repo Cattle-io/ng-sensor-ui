@@ -1,5 +1,5 @@
 import { PagesComponent } from '../../pages.component';
-///import { AuthenticationGuard } from '../../common/guards/authentication.guard';
+/// import { AuthenticationGuard } from '../../common/guards/authentication.guard';
 
 import { TeamComponent } from './team.component';
 

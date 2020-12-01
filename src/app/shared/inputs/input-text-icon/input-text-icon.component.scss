@@ -1,0 +1,74 @@
+.input.input-text-icon{
+    display: block;
+    width: 100%;
+    min-width: 150px;
+    padding: 1em;
+    padding-left: 0em;
+    .input-wrapper{
+        display: block;
+        width: 100%;
+        padding: 0.5em 1em;
+        border: 2px solid #b9b9b92b;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.025);
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        color: white;
+
+        i{
+            font-size: 40px;
+        }
+
+        label{
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: -5px;
+            left: 10px;
+        }
+        input{
+            background: none;
+            outline: none;
+            border: none;
+            width: fit-content;
+            color: white;
+            padding: 0.5em;
+            font-size: 17px;
+            width: 100%;
+            padding-left: 0;
+            margin-left: 0.5em;
+            border-bottom: 1px solid #b9b9b92b;
+            
+        }
+    }
+    .input-col{
+        display: block;
+        padding: 5px;
+        padding-left: 0px;
+        position: relative;
+        width: 100%;
+    }
+    .icon-col{
+        display: block;
+        padding-right: 5px;
+    }
+}

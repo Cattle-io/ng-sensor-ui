@@ -1,0 +1,15 @@
+<div class="input input-text-icon">
+  <div class="input-wrapper">
+    <div class="input-wrapper-col icon-col">
+      <i [class]="icon"></i>
+    </div>
+    <div class="input-wrapper-col input-col">
+      <label>{{ label }}</label>
+      <input 
+        type="text"
+        [placeholder]="value || placeholder"
+        [value]="value || placeholder"
+        (change)="setText($event)">
+    </div>
+  </div>
+</div>

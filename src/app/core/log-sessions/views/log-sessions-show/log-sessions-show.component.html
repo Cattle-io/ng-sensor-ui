@@ -1,0 +1,20 @@
+<div class="wrapper log-sessions-show--wrapper">
+
+
+    <div class="page-header">
+        <div class="play-pause-clear--btns">
+            <button class="play-btn" (click)="doPlay()"><i class="far fa-play-circle"></i> PLAY</button>
+            <button class="pause-btn" (click)="doPause()"><i class="far fa-pause-circle"></i> PAUSE</button>
+            <button class="clear-btn" (click)="doClear()"><i class="fas fa-eraser"></i> CLEAR</button>
+        </div>
+        <div class="download--btns">
+            <button class="download-btn" (click)="downloadReport()"> <i class="fas fa-download"></i>  DOWNLOAD</button>
+        </div>
+    </div>
+
+    <div class="page-content" *ngIf="logSession && devices && ch4packets && devices.length > 0">
+        <ui-ch4-chart [isPause]="isPause" [logSession]="logSession" [devices]="devices" [packets]="ch4packets"></ui-ch4-chart>
+    </div>
+
+
+</div>

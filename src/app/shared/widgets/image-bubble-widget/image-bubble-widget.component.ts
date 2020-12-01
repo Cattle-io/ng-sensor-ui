@@ -10,7 +10,7 @@ export class ImageBubbleWidgetComponent implements OnInit {
 
   @Input()
   src = '';
-  
+
   constructor() { }
 
   ngOnInit() {

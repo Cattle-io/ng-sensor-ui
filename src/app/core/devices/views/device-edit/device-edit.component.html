@@ -1,12 +1,84 @@
-<div class="page device-edit">
-    <div class="wrapper">
-        <div class="page-content">
-            
-            <div class="page-content--section">
-                
-            </div>
-         
-
+<div class="wrapper edit-device-wrapper">
+    <div class="page-content">
+  
+      <h1 class="title">EDIT DEVICE</h1>
+  
+      <form>
+  
+        <div class="form--row row-2x status-row " [ngClass]="{'online': status === 'ONLINE', 'offline':  status !== 'ONLINE'}">
+          <div class="col">
+            <i class="fas fa-power-off" ></i>
+            <label>DISCONNECTED</label>
+          </div>
+          <div class="col icons-wifi-battery">
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full" ></i>        </div>
         </div>
+  
+        <div class="form--row row-3x basic-row">
+          <div class="col">
+            <ui-input-text-icon
+              [icon]="'fas fa-address-card'" 
+              [error]="" 
+              [value]="device?.name" 
+              [label]="'Name'" 
+              [placeholder]="" 
+              (nChange)="setName($event)">
+            </ui-input-text-icon>
+          </div>
+          <div class="col">
+            <ui-input-text-icon 
+            [icon]="'fas fa-fingerprint'" 
+            [error]="" 
+            [value]="device?.uid" 
+            [label]="'UID'"
+            [placeholder]="" 
+            (nChange)="setUID($event)">
+            </ui-input-text-icon>
+          </div>
+          <div class="col">
+            <ui-input-text-icon 
+            [icon]="'fas fa-server'" 
+            [error]="" 
+            [value]="device?.ip" 
+            [label]="'IP'"
+            [placeholder]="" 
+            (nChange)="setIP($event)">
+            </ui-input-text-icon>
+          </div>
+          
+        </div>
+
+        <div class="form--row row-3x context-row">
+          <div class="col">
+            <ui-input-animal-selector
+              [error]="" 
+              [value]="device?.animal_id" 
+              (nChange)="setAnimal($event)">
+            </ui-input-animal-selector>
+          </div>
+          <div class="col">
+            <ui-input-experiment-selector
+              [error]="" 
+              [value]="device?.experiment_id" 
+              (nChange)="setExperiment($event)">
+            </ui-input-experiment-selector>
+          </div>
+        </div>
+  
+        <div class="form--row calibration-row">
+           
+        </div>
+  
+        <div class="form--row update-row">
+          <button (click) = "updateDevice()">
+            UPDATE DEVICE
+          </button>
+        </div>
+  
+  
+  
+      </form>
+  
     </div>
-</div>
+  </div>

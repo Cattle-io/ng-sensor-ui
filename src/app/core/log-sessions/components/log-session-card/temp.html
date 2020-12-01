@@ -1,0 +1,74 @@
+
+
+        <div class="card-section-header">
+            
+            <ui-h-bar-level-widget
+                [color]="'blue'"
+                [iconType]="'fontawesome'"
+                [iconImage]="'fas fa-wifi'"
+                [value]="signal"
+            ></ui-h-bar-level-widget>
+
+            <ui-h-bar-level-widget
+                [color]="'blue'"
+                [iconType]="'fontawesome'"
+                [iconImage]="'fas fa-battery-full'"
+                [value]="battery"
+            ></ui-h-bar-level-widget>
+
+    </div>
+
+    <div class="card-section-info">
+        <h1> {{ device.name }} # {{ device.uid}}</h1>
+        <h2> {{ device.experiment_id }} , {{ device.animal_id }}</h2>
+    </div>
+
+    <div class="card-section-footer">
+            
+                <div class="section-temp-and-hum">
+
+                    <ui-number-and-icon-widget
+                        [color]="'orange'"
+                        [iconType]="'fontawesome'"
+                        [iconImage]="'fas fa-thermometer-half'"
+                        [value]="temperature_value"
+                        [units]="temperature_units"
+                    ></ui-number-and-icon-widget>
+              
+                    <ui-number-and-icon-widget
+                        [color]="'#7c7cff'"
+                        [iconType]="'fontawesome'"
+                        [iconImage]="'fas fa-tint'"
+                        [value]="humidity_value"
+                        [units]="humidity_units"
+                    ></ui-number-and-icon-widget>
+
+                    <ui-number-and-icon-widget
+                        [color]="'#f35983'"
+                        [iconType]="'fontawesome'"
+                        [iconImage]="'fas fa-cloud'"
+                        [value]="ch4_value"
+                        [units]="ch4_units"
+                    ></ui-number-and-icon-widget>
+               
+                </div>
+
+                <div class="section-aminal-pic">
+
+                    <ui-image-bubble-widget
+                        [src]="animal_photo"
+                    ></ui-image-bubble-widget>
+
+                </div>
+            
+    </div>
+
+    <br>
+
+
+<div class="card-detail-wrapper">
+    <h1 (click)="doEdit()"><i class="fas fa-eye"></i></h1>
+    <span (click)="doDelete()">
+        <i class="fas fa-trash-alt"></i>
+    </span>
+</div>

@@ -1,0 +1,26 @@
+<div class="wrapper">
+
+
+    <div class="page-header">
+
+        <input type="search" class="input-search" placeholder="Search"
+        [(ngModel)]="SEARCH_KEYWORD"
+        > 
+        
+        <button class="button-add" (click)="goToLogSessionAdd()">
+            <span class="material-icons">
+                library_add
+            </span>
+        </button>
+    </div>
+
+    <div class="page-content">
+        <ul class="cards-list">
+            <li class="cards-item" *ngFor="let experiment of (logSessions | searchByKeyword: SEARCH_KEYWORD)">
+                <ui-log-session-card [logSession]="experiment"></ui-log-session-card>
+            </li>
+        </ul>
+    </div>
+
+
+</div>

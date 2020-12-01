@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeviceCardSlideComponent } from './device-card-slide.component';
+import { InputTextIconComponent } from './input-text-icon.component';
 
-describe('DeviceCardSlideComponent', () => {
-  let component: DeviceCardSlideComponent;
-  let fixture: ComponentFixture<DeviceCardSlideComponent>;
+describe('InputTextIconComponent', () => {
+  let component: InputTextIconComponent;
+  let fixture: ComponentFixture<InputTextIconComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeviceCardSlideComponent ]
+      declarations: [ InputTextIconComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeviceCardSlideComponent);
+    fixture = TestBed.createComponent(InputTextIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

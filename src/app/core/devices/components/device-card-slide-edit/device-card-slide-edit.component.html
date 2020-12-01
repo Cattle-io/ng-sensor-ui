@@ -1,0 +1,33 @@
+<div class="card-slide-wrapper edit">
+
+    <div class="row x1 row-device-name">
+        <ui-input-text-basic
+            style="width: 100%;"
+            [label]="'Device Name'"
+            [placeholder]="device?.name"
+            (nChange)="onNameChange($event)"
+        ></ui-input-text-basic>
+    </div>
+
+    <div class="row x2 row-device-modals">
+        <ui-input-select-modal
+            [label]="'Device Animal'"
+            [placeholder]="animal"
+            [options]="animals"
+            (nChange)="onAnimalChange($event)"
+            (nRemove)="onAnimalRemove($event)">
+            <div selected-box></div>
+            <div option-box></div>
+        </ui-input-select-modal>
+
+        <ui-input-select-modal
+                [label]="'Device Experiment'"
+                [placeholder]="experiment"
+                [options]="experiments"
+                (nChange)="onExperimentChange($event)"
+                (nRemove)="onExperimentRemove($event)">
+                <div selected-box></div>
+                <div option-box></div>
+        </ui-input-select-modal>
+    </div>
+</div>

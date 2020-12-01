@@ -1,5 +1,5 @@
 import { CoreComponent } from '../core.component';
-///import { AuthenticationGuard } from '../../common/guards/authentication.guard';
+/// import { AuthenticationGuard } from '../../common/guards/authentication.guard';
 
 import { DeviceListComponent } from './views/device-list/device-list.component';
 import { DeviceAddComponent } from './views/device-add/device-add.component';
@@ -14,7 +14,7 @@ export const DEVICES_ROUTES = [
     component:  CoreComponent,
     children: [
       { path: '', component: DeviceListComponent, data: {animation: 'DeviceListPage'} },
-      { path: ':deviceID', component: DeviceShowComponent, data: {animation: 'DeviceIdPage'} },
+      { path: 'show/:deviceID', component: DeviceShowComponent, data: {animation: 'DeviceIdPage'} },
       { path: 'add', component: DeviceAddComponent , data: {animation: 'DeviceAddPage'} },
       { path: 'edit/:deviceId', component: DeviceEditComponent , data: {animation: 'DeviceEditPage'} },
       { path: 'delete/:deviceId', component: DeviceDeleteComponent , data: {animation: 'DeviceDeletePage'} }

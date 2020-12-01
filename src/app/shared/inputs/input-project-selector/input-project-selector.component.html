@@ -1,0 +1,15 @@
+<div class="input input-project-selector">
+    <div class="input-wrapper">
+        <div class="input-wrapper-col icon-col">
+          <img src="../../../../assets/icons/project-icon-w3.png" class="icon-animal">
+        </div>
+        <div class="input-wrapper-col input-col">
+          <label>Project</label>
+          <select  (change)="setProject($event)">
+            <option  *ngIf="project" [value]="project.id"> {{ project.title }}</option>
+            <option> &nbsp; -  &nbsp;</option>
+            <option *ngFor="let project of projects" [value]="project.id"> {{ project.title }} </option>
+          </select>
+        </div>
+      </div>
+    </div>

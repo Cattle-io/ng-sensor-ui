@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IDevice } from '../../models/device.interface';
+import { IAnimal } from '../../models/animal.interface';
+import { IExperiment } from '../../models/experiment.interface';
 
 @Component({
   selector: 'ui-device-card',
@@ -9,7 +11,13 @@ import { IDevice } from '../../models/device.interface';
 export class DeviceCardComponent implements OnInit {
 
   @Input()
-  device: IDevice;
+  device: IDevice | null;
+
+  @Input()
+  animal: IAnimal | null;
+
+  @Input()
+  experiment: IExperiment | null;
 
   @Output()
   edit = new EventEmitter();
@@ -17,44 +25,62 @@ export class DeviceCardComponent implements OnInit {
   @Output()
   delete = new EventEmitter();
 
-  private isActive = true;
+  public isActive = true;
 
-  private color  = 'blue';
-  private signal = 0;
-  private battery = 0;
-  private animal_photo = 'https://thumbs.dreamstime.com/z/electronic-monitoring-device-dairy-cow-close-profile-view-dairy-cow-wearing-electronic-monitor-helps-farmer-151791575.jpg'
+  public color  = 'blue';
+  public signal = 0;
+  public battery = 0;
+  public animal_photo = 'https://thumbs.dreamstime.com/z/electronic-monitoring-device-dairy-cow-close-profile-view-dairy-cow-wearing-electronic-monitor-helps-farmer-151791575.jpg';
 
-  private temperature_value = 30;
-  private temperature_units = '°C';
+  public temperature_value = 30;
+  public temperature_units = '°C';
 
-  private humidity_value = 80;
-  private humidity_units = '%';
+  public humidity_value = 80;
+  public humidity_units = '%';
 
-  private ch4_value = 120;
-  private ch4_units = 'ppm';
+  public ch4_value = 120;
+  public ch4_units = 'ppm';
+
+  public config = {
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  };
+
+  public index = 0;
 
   constructor() { }
 
   ngOnInit() {
     setInterval(() => {
-      //this.isActive = Math.random() > 0.5;
-      this.signal = 80 + 20*(Math.random()-Math.random())
-      this.battery = 30 + 20*(Math.random()-Math.random())
-    },1000)
+      // this.isActive = Math.random() > 0.5;
+      this.signal = 80 + 20 * (Math.random() - Math.random());
+      this.battery = 30 + 20 * (Math.random() - Math.random());
+    }, 1000);
   }
 
   getCardTitle(): string {
-    return this.device.name + ' ' + this.device.uid 
+    return this.device.name + ' ' + this.device.uid;
   }
   getCardSubtitle(): string{
-    return 'Exp ' + this.device.experiment_id + ' Animal ' + this.device.animal_id
+    return 'Exp ' + this.device.experiment_id + ' Animal ' + this.device.animal_id;
   }
 
   doEdit(){
-    this.edit.emit(this.device.id)
+    this.edit.emit(this.device.id);
   }
   doDelete(){
-    this.delete.emit(this.device.id)
+    this.delete.emit(this.device.id);
   }
 
 }

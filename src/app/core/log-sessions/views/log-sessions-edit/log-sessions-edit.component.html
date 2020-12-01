@@ -1,0 +1,79 @@
+<div class="wrapper edit-log-session-wrapper">
+    <div class="page-content">
+  
+      <h1 class="title">EDIT EXPERIMENT</h1>
+  
+      <form>
+  
+        <div class="form--row row-2x status-row " [ngClass]="{'online': status === 'LOGGING', 'offline':  status !== 'STOPPED'}">
+          <div class="col">
+            <i class="fas fa-power-off" ></i>
+            <label> STATUS : {{ 'STOP' }}</label>
+          </div>
+          <div class="col icons-wifi-battery">
+              
+          </div>
+        </div>
+
+        <div class="form--row row-3x basic-row">
+          <div class="col">
+            <ui-input-text-icon
+                [icon]="'fas fa-address-card'" 
+                [error]="" 
+                [value]="logSession?.title" 
+                [label]="'Title'" 
+                [placeholder]="" 
+                (nChange)="setTitle($event)">
+            </ui-input-text-icon>
+          </div>
+          <div class="col">
+            <ui-input-text-icon 
+              [icon]="'far fa-file-alt'" 
+              [error]="" 
+              [value]="logSession?.description" 
+              [label]="'Description'"
+              [placeholder]="" 
+              (nChange)="setDescription($event)">
+            </ui-input-text-icon>
+          </div>
+          <div class="col">
+            <ui-input-project-selector
+              [error]="" 
+              [value]="logSession?.project_id" 
+              (nChange)="setProject($event)">
+            </ui-input-project-selector>
+          </div>
+          
+        </div>
+        <div class="form--row row-3x basic-row">
+          <div class="col">
+            <ui-input-icon-play
+                [value]="logSession?.status"
+                (nChange)="setLogSessionStatusPlay($event)">
+            </ui-input-icon-play>
+          </div>
+          <div class="col">
+            <ui-input-icon-pause
+                [value]="logSession?.status"
+                (nChange)="setLogSessionStatusPause($event)">
+            </ui-input-icon-pause>
+          </div>
+          <div class="col">
+           
+          </div>
+          
+        </div>
+
+  
+        <div class="form--row update-row">
+          <button (click) = "updateLogSession()">
+            UPDATE EXPERIMENT
+          </button>
+        </div>
+  
+  
+
+      </form>
+  
+    </div>
+  </div>

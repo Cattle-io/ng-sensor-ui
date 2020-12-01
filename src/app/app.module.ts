@@ -3,9 +3,8 @@ import { NgxsModule } from '@ngxs/store';
 import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SwiperModule } from 'ngx-swiper-wrapper';
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+
 
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,11 +17,9 @@ import { CoreModule } from './core/core.module';
 import { PagesModule } from './pages/pages.module';
 import { AuthModule } from './auth/auth.module';
 
+import { ChartModule } from 'angular-highcharts';
 
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 'auto'
-};
+ 
 
 
 @NgModule({
@@ -40,14 +37,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     CoreModule,
     PagesModule,
     AuthModule,
-    SwiperModule
+    ChartModule
 
-  ],
-  providers: [
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    }
   ],
   bootstrap: [AppComponent]
 })

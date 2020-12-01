@@ -18,14 +18,15 @@
         <ul class="cards-list">
             <li class="cards-item" *ngFor="let device of (devices | searchByKeyword: SEARCH_KEYWORD)">
                 <ui-device-card 
-                [device] = "device" 
-                (edit)="goToDeviceById($event)"
-                (delete)="goToDeleteDeviceById($event)"
+                    [device] = "device" 
+                    [animal] = "animals | getById: device.animal_id"
+                    [experiment] = "experiments | getById: device.experiment_id"
+                    (edit)="goToDeviceById($event)"
+                    (delete)="goToDeleteDeviceById($event)"
                 ></ui-device-card>
             </li>
         </ul>
     </div>
 
-   
-    
+
 </div>

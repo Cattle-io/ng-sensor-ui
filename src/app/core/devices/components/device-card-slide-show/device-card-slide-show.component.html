@@ -1,0 +1,76 @@
+<div class="card-slide-wrapper show">
+    <div class="card-section-header">
+        <ui-h-bar-level-widget
+            [color]="'blue'"
+            [iconType]="'fontawesome'"
+            [iconImage]="'fas fa-wifi'"
+            [value]="device.last_signal_level"
+        ></ui-h-bar-level-widget>
+
+        <ui-h-bar-level-widget
+            [color]="'blue'"
+            [iconType]="'fontawesome'"
+            [iconImage]="'fas fa-battery-full'"
+            [value]="device.last_battery_level"
+        ></ui-h-bar-level-widget>
+
+    </div>
+
+    <div class="card-section-info">
+        <h2 *ngIf="device"> <img src="../../../../../assets/icons/device-icon-w3.png" class="icon-device"> {{ device.name }} # {{ device.uid }}</h2>
+        <h2 *ngIf="animal"> <img src="../../../../../assets/icons/cow-icon-w3.png" class="icon-animal"> {{ animal.name }}</h2>
+        <h2 *ngIf="experiment"> <img src="../../../../../assets/icons/rxperiment-icon-w3.png" class="icon-experiment"> {{ experiment.title}}  </h2>
+    </div>
+
+    
+
+
+<div class="card-section-footer">
+
+
+    <ui-led-widget
+        [label]="'STATUS'"
+        [value]="device.status"
+        (nClick)="sendStartStopCommand(device.uid)"
+    ></ui-led-widget>
+
+        <!--
+            
+
+                <ui-number-and-icon-widget
+                    [color]="'orange'"
+                    [iconType]="'fontawesome'"
+                    [iconImage]="'fas fa-thermometer-half'"
+                    [value]="device.temperature_value"
+                    [units]="device.temperature_units"
+                ></ui-number-and-icon-widget>
+          
+                <ui-number-and-icon-widget
+                    [color]="'#7c7cff'"
+                    [iconType]="'fontawesome'"
+                    [iconImage]="'fas fa-tint'"
+                    [value]="device.humidity_value"
+                    [units]="device.humidity_units"
+                ></ui-number-and-icon-widget>
+
+                <ui-number-and-icon-widget
+                    [color]="'#f35983'"
+                    [iconType]="'fontawesome'"
+                    [iconImage]="'fas fa-cloud'"
+                    [value]="device.ch4_value"
+                    [units]="device.ch4_units"
+                ></ui-number-and-icon-widget>
+           
+            </div>
+
+            <div class="section-aminal-pic">
+
+                <ui-image-bubble-widget
+                    [src]="animal.picture_url"
+                ></ui-image-bubble-widget>
+
+            </div>
+   -->     
+</div>
+
+</div>

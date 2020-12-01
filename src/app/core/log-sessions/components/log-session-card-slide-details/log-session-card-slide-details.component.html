@@ -1,0 +1,24 @@
+<div class="card-slide-wrapper details">
+    <div class="card-section-header">
+
+        <button (click)="goToEditLogSessionById(logSession.id)">
+            <i class="fas fa-edit"></i>
+        </button>
+
+        <button (click)="goToDeleteLogSessionById(logSession.id)" style="margin-left: 23px; color: red;">
+            <i class="fas fa-trash-alt"></i>
+        </button>
+
+    </div>
+
+    <div class="card-section-info">
+        <h2 *ngIf="logSession"> <strong>Description : </strong> {{ logSession.description }}</h2>
+        <h2 *ngIf="logSession"> <strong>Duration (hrs) : </strong> {{ logSession.duration_hrs }}</h2>
+    </div>
+
+
+    <div class="card-section-footer">
+     
+    </div>
+
+</div>

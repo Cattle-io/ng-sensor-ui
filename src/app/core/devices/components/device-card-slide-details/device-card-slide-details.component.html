@@ -1,0 +1,28 @@
+<div class="card-slide-wrapper details">
+    <div class="card-section-header">
+
+        <button (click)="goToEditDeviceById(device.id)">
+            <i class="fas fa-edit"></i>
+        </button>
+
+        <button (click)="goToDeleteDeviceById(device.id)" style="margin-left: 23px; color: red;">
+            <i class="fas fa-trash-alt"></i>
+        </button>
+
+    </div>
+
+    <div class="card-section-info">
+        <h2 *ngIf="device"> <strong>ID : </strong> {{ device.id }}</h2>
+        <h2 *ngIf="device"> <strong>IP : </strong> {{ device.ip }}</h2>
+        <h2 *ngIf="device"> <strong>Firmware : </strong> {{ device.firmware }}</h2>
+        <h2 *ngIf="device"> <strong>Category : </strong> {{ device.category }}</h2>
+        <h2 *ngIf="device"> <strong>Connection : </strong> {{ device.status }}</h2>
+
+    </div>
+
+
+    <div class="card-section-footer">
+     
+    </div>
+
+</div>

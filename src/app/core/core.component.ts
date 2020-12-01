@@ -13,7 +13,7 @@ import { slideInAnimation } from './core.animations';
 })
 export class CoreComponent implements OnInit {
 
-  private $user: any = {
+  public $user: any = {
     username : 'Jorge Luis Mayorga',
     status: 'Online',
     profile: {
@@ -63,15 +63,20 @@ export class CoreComponent implements OnInit {
   ]
 
   */
- private $sidebarLinks: any[] = [
+ public $sidebarLinks: any[] = [
+  { text: 'Devices', link : '/core/devices/' , icon: 'settings_remote'},
+  { text: 'Experiments', link : '/core/log-sessions/', icon: 'today' },
+/*
   { text: 'Projects', link : '/core/projects/', icon: 'work' },
   { text: 'Dashboards', link : '/core/dashboards/', icon: 'dashboard' },
   { text: 'LogSessions', link : '/core/log-sessions/', icon: 'today' },
-  { text: 'Devices', link : '/core/devices/' , icon: 'settings_remote'},
   { text: 'Users', link : '/core/users/' , icon: 'person'},
   { text: 'Notifications', link : '/core/notifications/' , icon: 'message'},
   { text: 'Settings', link : '/core/settings/' , icon: 'settings_application'},
- ]
+  */
+ ];
+
+ public panelOpenState;
 
   constructor() { }
 
@@ -79,7 +84,7 @@ export class CoreComponent implements OnInit {
   }
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 
 }

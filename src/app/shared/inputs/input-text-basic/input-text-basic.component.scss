@@ -1,0 +1,31 @@
+.input-wrapper{
+    
+    display: block;
+    width: calc(100% - 2em);
+
+    color: white;
+    padding: 1em;
+
+    border: 1px solid #ffffff1f;
+    border-radius: 1em;
+
+    margin: 1em;
+    box-sizing: border-box;
+
+
+    label{
+        display: block;
+        width: 100%;
+    }
+    input{
+        display: block;
+        width: 100%;
+
+        background: none;
+        border: none;
+        outline: none;
+
+        color: white;
+        padding: 0.25em;
+    }
+}

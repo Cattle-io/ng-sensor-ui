@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { DevicesService } from '../../devices.service';
-import { IDevice } from '../../models/device.interface';
 import { Router, ActivatedRoute } from '@angular/router';
+
+import { DevicesService } from '../../devices.service';
+import { AnimalsService } from '../../animals.service';
+import { ExperimentsService } from '../../experiments.service';
+
+import { IDevice } from '../../models/device.interface';
+import { IExperiment } from '../../models/experiment.interface';
+import { IAnimal } from '../../models/animal.interface';
 
 @Component({
   selector: 'ui-device-list',
@@ -10,13 +16,28 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class DeviceListComponent implements OnInit {
 
-  private devices: IDevice[] = [];
-  private SEARCH_KEYWORD = '';
+  public devices: IDevice[] = [];
+  public animals: IAnimal[] = [];
+  public experiments: IExperiment[] = [];
+  public SEARCH_KEYWORD = '';
 
-  constructor(private $devices: DevicesService,private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private $devices: DevicesService,
+    private $animals: AnimalsService,
+    private $experiments: ExperimentsService,
+    private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.$devices.getAll().then(devices => this.devices = devices)
+
+    this.$devices.getAll().then(devices => this.devices = devices);
+    this.$animals.getAll().then(animals => this.animals = animals);
+    this.$experiments.getAll().then(experiments => this.experiments = experiments);
+
+    this.devices.forEach(device => {
+      device.temperature_value  = 32.334;
+      device.temperature_units = '°C';
+    });
+
   }
 
   goToDeviceAdd(){

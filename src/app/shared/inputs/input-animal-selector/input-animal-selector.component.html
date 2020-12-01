@@ -1,0 +1,19 @@
+<div class="input input-animal-selector">
+    <div class="input-wrapper">
+        <div class="input-wrapper-col icon-col">
+          <img src="../../../../assets/icons/cow-icon-w3.png" class="icon-animal">
+        </div>
+        <div class="input-wrapper-col input-col">
+          <label>Animal</label>
+          <select (change)="setAnimal($event)">
+
+            <option *ngIf="!animal"> &nbsp; - &nbsp; </option>
+
+            <option *ngIf="animal" [value]="animal.id"> {{ animal.name }}</option>
+            <option *ngFor="let animal of (animals | filterRemoveItemById: (animal?.id + ''))" [value]="animal.id"> {{ animal.name }} </option>
+            <option *ngIf="animal"> &nbsp; - &nbsp; </option>
+
+          </select>
+        </div>
+      </div>
+    </div>

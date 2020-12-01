@@ -1,29 +1,36 @@
 <div class="card card-device" [ngClass]="{'unactive': !isActive }">
     <div class="card-main-wrapper">
 
-        <div  class="swiper-container" [swiper]="config" [(index)]="index">
-            <div class="swiper-wrapper">
-
+        <swiper  [swiper]="config"  >
+   
               <div class="swiper-slide">
-                Swiper slide content 1 
+                  <ui-device-card-slide-show 
+                  [device]="device" 
+                  [animal]="animal" 
+                  [experiment]="experiment">
+                </ui-device-card-slide-show>
               </div>
-
+            
+              <!--               
+                <div class="swiper-slide">
+                <ui-device-card-slide-edit
+                  [device]="device" 
+                  [animal]="animal" 
+                  [experiment]="experiment">
+              </ui-device-card-slide-edit>
+              </div>
+      </div>
+            -->
               <div class="swiper-slide">
-                Swiper slide content2 
-              </div>
-
-              <div class="swiper-slide">
-                Swiper slide content 3
-              </div>
-
+                <ui-device-card-slide-details
+                  [device]="device" 
+                  [animal]="animal" 
+                  [experiment]="experiment"
+                ></ui-device-card-slide-details>
             </div>
-           
-            <div class="swiper-scrollbar"></div>
-            <div class="swiper-pagination"></div>
-           
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
+          
+
+        </swiper>
 
     </div>
 </div>

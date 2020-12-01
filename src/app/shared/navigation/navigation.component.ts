@@ -15,14 +15,7 @@ export class NavigationComponent {
       map(result => result.matches),
       shareReplay()
     );
-    messages$ = [
-      'MESSAGE 1',
-      'MESSAGE 2',
-      'MESSAGE 3',
-      'MESSAGE 4',
-      'MESSAGE 5',
-      'MESSAGE 6',
-    ];
+    messages$ = [];
     notifications$ = [];
 
   constructor(private breakpointObserver: BreakpointObserver) {}

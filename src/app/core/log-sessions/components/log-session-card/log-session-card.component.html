@@ -1,0 +1,21 @@
+<div class="card card-device" [ngClass]="{'unactive': !isActive }">
+    <div class="card-main-wrapper">
+
+        <swiper  [swiper]="config"  >
+   
+              <div class="swiper-slide">
+                  <ui-log-session-card-slide-show
+                    [logSession]="logSession">
+                  </ui-log-session-card-slide-show>
+              </div>
+        
+              <div class="swiper-slide">
+                <ui-log-session-card-slide-details
+                    [logSession]="logSession">
+                </ui-log-session-card-slide-details>
+              </div>
+
+        </swiper>
+
+    </div>
+</div>

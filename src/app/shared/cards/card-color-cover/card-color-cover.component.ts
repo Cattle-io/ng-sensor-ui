@@ -8,19 +8,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CardColorCoverComponent implements OnInit {
 
   @Input()
-  title: string = '';
+  title = '';
 
   @Input()
-  subtitle: string = '';
+  subtitle = '';
 
   @Input()
-  image: string = '';
+  image = '';
 
   @Input()
-  cover: string = '';
+  cover = '';
 
   @Input()
-  color: string = '';
+  color = '';
 
   @Input()
   buttons: any[] = [];

@@ -6,14 +6,19 @@
     <ui-navigation-items>
 
         <div class="" *ngFor="let link of $sidebarLinks">
+
+          <a mat-list-item [routerLink]="link.link + '/'" >
+            <mat-icon style="color:white;"> {{ link.icon }}</mat-icon> <h1 style="font-size:14px; margin:0px; padding-left: 1em; color: white"> {{ link.text }} </h1>
+          </a>
+<!--
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="sidebar mat-expansion-panel">
-
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <mat-icon> {{ link.icon }}</mat-icon> <h1> {{ link.text }} </h1>
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-
+             
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon> {{ link.icon }}</mat-icon> <h1> {{ link.text }} </h1>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+            
               <a mat-list-item [routerLink]="link.link + '/'"  style="color: white;">{{ link.text }} </a>
               <a mat-list-item [routerLink]="link.link + '/add'"  style="color: white;">{{ link.text }} add</a>
               <a mat-list-item [routerLink]="link.link + '/edit'"  style="color: white;">{{ link.text }} edit</a>
@@ -21,7 +26,7 @@
               <a mat-list-item [routerLink]="link.link + '/delete'"  style="color: white;">{{ link.text }} delete </a>
 
             </mat-expansion-panel>
-
+          -->
 
 
 
